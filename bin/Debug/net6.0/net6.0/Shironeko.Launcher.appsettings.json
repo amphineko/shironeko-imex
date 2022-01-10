@@ -1,0 +1,7 @@
+{
+  "ClusterId": "testing",
+  "Extensions": [
+    "Shironeko.Telegram.dll"
+  ],
+  "ServiceId": "Shironeko"
+}
