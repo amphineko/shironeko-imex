@@ -1,9 +1,12 @@
 using System.Reflection;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Orleans;
 using Orleans.Configuration;
 using Orleans.Hosting;
+using Shironeko.Core.Extensions;
 using Shironeko.Core.Routing;
 
 namespace Shironeko.Launcher;
@@ -25,6 +28,10 @@ public class SiloHostService : IHostedService
                 options.ClusterId = config.ClusterId;
                 options.ServiceId = config.ServiceId;
             })
+            .ConfigureAppConfiguration(builder =>
+            {
+                builder.AddJsonFile($"{typeof(Program).Assembly.GetName().Name}.json", false);
+            })
             .ConfigureApplicationParts(partManager =>
             {
                 partManager.AddApplicationPart(typeof(IRouter).Assembly).WithReferences();
@@ -39,6 +46,16 @@ public class SiloHostService : IHostedService
                 }
             })
             .ConfigureLogging(builder => { builder.AddConsole(); })
+            .ConfigureServices(services =>
+            {
+                services.AddSingleton(sp => sp.GetRequiredService<IConfiguration>().Get<Configuration>());
+
+                services.AddSingleton<ExtensionRegistry>();
+                services.AddSingleton<IExtensionRegistry>(sp => sp.GetRequiredService<ExtensionRegistry>());
+
+                services.AddSingleton<EventHandlerActivator>();
+                services.AddSingleton<IEventHandlerActivator>(sp => sp.GetRequiredService<EventHandlerActivator>());
+            })
             .UseLocalhostClustering()
             .Build();
     }

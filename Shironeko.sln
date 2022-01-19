@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shironeko.Launcher", "Shironeko.Launcher\Shironeko.Launcher.csproj", "{D89A42BA-1A93-418B-9277-532BC8A3ADCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shironeko.Core", "Shironeko.Core\Shironeko.Core.csproj", "{A06CC17C-79AB-4CF7-B1D4-141A6C82D2B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shironeko.Telegram", "Shironeko.Telegram\Shironeko.Telegram.csproj", "{5400D364-0FEF-40F8-BB00-70CE40D1618B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shironeko.Telegram.Launcher", "Shironeko.Telegram.Launcher\Shironeko.Telegram.Launcher.csproj", "{E0C21935-112D-468F-AD3B-544EE19DC127}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D89A42BA-1A93-418B-9277-532BC8A3ADCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89A42BA-1A93-418B-9277-532BC8A3ADCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89A42BA-1A93-418B-9277-532BC8A3ADCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89A42BA-1A93-418B-9277-532BC8A3ADCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A06CC17C-79AB-4CF7-B1D4-141A6C82D2B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A06CC17C-79AB-4CF7-B1D4-141A6C82D2B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A06CC17C-79AB-4CF7-B1D4-141A6C82D2B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A06CC17C-79AB-4CF7-B1D4-141A6C82D2B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5400D364-0FEF-40F8-BB00-70CE40D1618B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5400D364-0FEF-40F8-BB00-70CE40D1618B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5400D364-0FEF-40F8-BB00-70CE40D1618B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5400D364-0FEF-40F8-BB00-70CE40D1618B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C21935-112D-468F-AD3B-544EE19DC127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C21935-112D-468F-AD3B-544EE19DC127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C21935-112D-468F-AD3B-544EE19DC127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C21935-112D-468F-AD3B-544EE19DC127}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

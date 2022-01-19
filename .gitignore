@@ -1,0 +1,6 @@
+.idea
+
+/bin
+/*/obj
+
+!bin/Debug/net6.0/net6.0/Shironeko.Launcher.appsettings.json
